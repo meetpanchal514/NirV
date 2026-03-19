@@ -119,13 +119,13 @@ export default function Footer() {
                 <li className="flex items-start gap-3">
                   <MapPin size={16} className="text-amber-400 mt-0.5 shrink-0" />
                   <span className="text-white/50 text-sm">
-                    123 Industrial Pkwy,<br />Commerce City, CA 90040
+                    2500 Knights Rd #2902,<br />Bensalem, PA 19020
                   </span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone size={16} className="text-amber-400 shrink-0" />
-                  <a href="tel:+18005551234" className="text-white/50 hover:text-white text-sm transition-colors">
-                    +1 (800) 555-1234
+                  <a href="tel:+12678811131" className="text-white/50 hover:text-white text-sm transition-colors">
+                    +1 (267) 881-1131
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
