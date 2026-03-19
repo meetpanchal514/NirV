@@ -13,11 +13,34 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 }
 
-const app = initializeApp(firebaseConfig)
+const requiredKeys = ['apiKey', 'authDomain', 'projectId', 'appId']
+const hasFirebaseConfig = requiredKeys.every((key) => {
+  const value = firebaseConfig[key]
+  return typeof value === 'string' && value.trim().length > 0
+})
 
-export const auth = getAuth(app)
-export const db = getFirestore(app)
-export const storage = getStorage(app)
-export const googleProvider = new GoogleAuthProvider()
+let app = null
+let auth = null
+let db = null
+let storage = null
+let googleProvider = null
+let firebaseInitError = null
 
+if (hasFirebaseConfig) {
+  try {
+    app = initializeApp(firebaseConfig)
+    auth = getAuth(app)
+    db = getFirestore(app)
+    storage = getStorage(app)
+    googleProvider = new GoogleAuthProvider()
+  } catch (error) {
+    firebaseInitError = error
+    console.warn('Firebase client initialization failed. Auth features are disabled until env values are fixed.', error)
+  }
+} else {
+  firebaseInitError = new Error('Firebase client env vars are missing.')
+  console.warn('Firebase client env vars are missing. Auth features are disabled until env values are configured.')
+}
+
+export { app, auth, db, storage, googleProvider, hasFirebaseConfig, firebaseInitError }
 export default app
