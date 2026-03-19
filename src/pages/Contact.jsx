@@ -8,7 +8,7 @@ const infoCards = [
   {
     Icon: Phone,
     title: 'Phone',
-    lines: ['+1 (800) 555-1234', 'Mon–Fri 8am – 6pm PST'],
+    lines: ['+1 (267) 881-1131', 'Mon–Fri 8am – 6pm PST'],
     color: '#f59e0b',
   },
   {
@@ -20,7 +20,7 @@ const infoCards = [
   {
     Icon: MapPin,
     title: 'Address',
-    lines: ['123 Industrial Pkwy', 'Commerce City, CA 90040'],
+    lines: ['2500 Knights Rd #2902', 'Bensalem, PA 19020'],
     color: '#10b981',
   },
   {
@@ -218,10 +218,10 @@ export default function Contact() {
                 style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.08), rgba(245,158,11,0.08))' }} />
               <div className="relative text-center">
                 <MapPin size={32} className="text-amber-400 mx-auto mb-2" />
-                <p className="text-white/60 text-sm font-medium">123 Industrial Pkwy</p>
-                <p className="text-white/40 text-sm">Commerce City, CA 90040</p>
+                <p className="text-white/60 text-sm font-medium">2500 Knights Rd #2902</p>
+                <p className="text-white/40 text-sm">Bensalem, PA 19020</p>
                 <a
-                  href="https://maps.google.com"
+                  href="https://www.google.com/maps/place/2500+Knights+Rd,+Bensalem,+PA+19020/@40.1001661,-74.9620225,16z/data=!3m1!4b1!4m11!1m4!7m3!1m1!1s101425486574003802593!2e2!3m5!1s0x89c14d2efa3ac1ad:0xc2f9deadc5e8cbc3!8m2!3d40.0998936!4d-74.9596007!16s%2Fg%2F11bw3zkbr_?entry=ttu&g_ep=EgoyMDI2MDMxNS4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-xs text-amber-400 hover:text-amber-300 mt-3 transition-colors"
